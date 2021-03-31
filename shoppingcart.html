@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sana Online Shopping</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel='stylesheet' href='style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='bootstrap-table.css' type='text/css' media='all' />
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"> </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="loadShoppingCart()">
+    <header>
+        <nav>
+            <button class="btn btn-secondary my-2 my-sm-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                </svg> Shopping Cart
+
+                <i class="btn badge" id="itemsBasket" style="font-size:14px"></i>
+            </button>
+
+            <button class="btn btn-secondary my-2 my-sm-0" onclick="location.href='index.html';">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-house-door" viewBox="0 0 16 16">
+                    <path
+                        d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
+                </svg> Home
+
+                <i class="bi bi-house-door" style="font-size: 14px;"></i>
+            </button>
+       
+        </nav>
+
+
+       
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                
+                   <h1>Sana Online Shopping</h1> 
+             
+            </nav>
+    </header>
+    <section>
+
+        <div class="container-lg">
+
+
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <h2>Products</h2>
+                        </div>
+                        <div class="col-sm-4">
+
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-bordered" id="cartTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Product information</th>
+                            <th>Number of items</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartItems">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </section>
+
+    <article>
+
+        <div class="container">
+            <h1>Shipping</h1>
+            <p>Enter your shipping and contact details</p>
+            <hr />
+            <div class="form">
+
+                <div class="fields fields--2">
+                    <label class="field">
+                        <span class="field__label">First name</span>
+                        <input class="field__input" type="text" id="firstname" required />
+                    </label>
+                    <label class="field">
+                        <span class="field__label">Last name</span>
+                        <input class="field__input" type="text" id="lastname" />
+                    </label>
+                </div>
+                <label class="field">
+                    <span class="field__label">Address</span>
+                    <input class="field__input" type="text" id="address" />
+                </label>
+                <label class="field">
+                    <span class="field__label">E-mail</span>
+                    <input class="field__input" type="email" id="email">
+                </label>
+                <div class="fields fields--3">
+                    <label class="field">
+                        <span class="field__label">Zip code</span>
+                        <input class="field__input" type="text" id="zipcode" />
+                    </label>
+                    <label class="field">
+                        <span class="field__label">City</span>
+                        <input class="field__input" type="text" id="city" />
+                    </label>
+                    <label class="field">
+                        <span class="field__label">Phone number</span>
+                        <input class="field__input" type="text" id="phonenumber"/>
+
+                        
+                    </label>
+                </div>
+            </div>
+            <hr>
+            <button class="button" onclick="validateForm()">Submit</button>
+
+            <p id="invalidfirstname"></p>
+            <p id="invalidlastname"></p>
+            <p id="invalidaddress"></p>
+            <p id="invalidemail"></p>
+            <p id="invalidzipcode"></p>
+            <p id="invalidcity"></p>
+            <p id="invalidphonenumber"></p>
+        </div>
+
+    </article>
+
+
+    <script src="app.js"></script>
+
+
+
+  
+    <footer>
+        <p>Copyright &copy; 2021 – Sana Eneroth Boukchana –</p>
+    </footer>
+
+</body>
+
+</html>

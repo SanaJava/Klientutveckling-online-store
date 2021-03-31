@@ -1,0 +1,382 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+}
+
+article,
+/*
+aside,
+details,
+figcaption,
+figure,
+main,
+nav,
+section,
+*/
+footer,
+header {
+  display: block;
+}
+
+/* Style the header */
+header {
+  font-family: "Rock Salt", cursive;
+  padding: 20px;
+  font-size: 35px;
+  color: black;
+  text-align: center;
+}
+p.outset {
+  border-style: outset;
+}
+
+h1 {
+  text-shadow: 4px 5px 5px rgb(158, 158, 158);
+  border: 7px solid rgb(0, 0, 0);
+  margin: 0;
+  text-align: center;
+}
+
+/* Create two columns/boxes that floats next to each other 
+aside {
+  float: right;
+  width: 25%;
+  margin: 2%;
+  height: 80px;
+  background: #ccc;
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
+}
+*/
+
+/* Style the list inside the menu
+aside ul {
+  list-style-type: none;
+  padding: 0;
+}
+ */
+
+button.menu-toggle {
+  background: none;
+  border: 1px;
+  box-shadow: black;
+  color: #ffffff;
+  font-size: 5px;
+  margin: 1px;
+  outline-style: none;
+  text-shadow: 4px 5px 5px rgb(158, 158, 158);
+  text-transform: uppercase;
+}
+
+nav {
+  background-color: white;
+  justify-content: inherit;
+  padding: inherit;
+}
+
+.btn {
+  float: right;
+  
+}
+.btn:after{
+    content:attr(value);
+    font-size:5px;
+    border-radius:50%;
+    padding:3px;
+    position:fixed;
+    left:-8px;
+    top:-10px;
+    opacity:0.9;
+    }
+
+/*
+section {
+  float: center;
+  padding: 20px;
+  margin: 2%;
+  width: 65%;
+  background-color: white;
+}
+
+
+article {
+  float: center;
+  padding: 30px;
+  margin: 2%;
+  width: 65%;
+  background-color: white;
+}
+*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 40px;
+  padding: 30px;
+}
+
+.grid-item {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  font-size: 10px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+img {
+  max-height: 100px;
+  cursor: pointer;
+}
+.scale-down {
+  object-fit: scale-down;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+footer {
+  padding: 2em 0;
+  text-align: center;
+  background-color: #333;
+  color: #999;
+  text-decoration-line: overline;
+}
+
+#loadImage {
+  font-family: "Gill Sans", sans-serif;
+  cursor: pointer;
+  text-align: center;
+}
+
+@import url("https://rsms.me/inter/inter.css");
+
+:root {
+  --color-gray: #737888;
+  --color-lighter-gray: #e3e5ed;
+  --color-light-gray: #f7f7fa;
+}
+
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+form {
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+p {
+  color: var(--color-gray);
+}
+
+hr {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-light-gray);
+  border: 0;
+  margin: 2rem 0;
+}
+
+.container {
+  max-width: 40rem;
+  padding: 10vw 2rem 0;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.form {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-lighter-gray);
+  padding: .5rem;
+  border-radius: .25rem;
+}
+
+.field__label {
+  color: var(--color-gray);
+  font-size: 0.6rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem
+}
+
+.field__input {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+}
+.field:focus-within {
+  border-color: #000;
+}
+
+.fields {
+  display: grid;
+  grid-gap: 1rem;
+}
+.fields--2 {
+  grid-template-columns: 1fr 1fr;
+}
+.fields--3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.button {
+  background-color: #000;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: block;
+  color: #fff;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+}
+.button:focus-visible {
+  background-color: #333;
+}
+/*
+
+.list-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto ;
+    grid-gap: 40px;
+    padding: 30px;
+  }
+  
+  .list-item {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    font-size: 5px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  */
+ 
+
+  .table-wrapper  {
+      
+    width: 700px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;	
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.table-title {
+    padding-bottom: 10px;
+    margin: 0 0 10px;
+}
+.table-title h2 {
+    margin: 6px 0 0;
+    font-size: 22px;
+}
+.table-title .add-new {
+    float: right;
+    height: 30px;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: none;
+    min-width: 100px;
+    border-radius: 50px;
+    line-height: 13px;
+}
+.table-title .add-new i {
+    margin-right: 4px;
+}
+table.table {
+    table-layout: fixed;
+}
+table.table tr th, table.table tr td {
+    border-color: #e9e9e9;
+}
+table.table th i {
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+table.table th:last-child {
+    width: 100px;
+}
+table.table td a {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 5px;
+    min-width: 24px;
+}    
+table.table td a.add {
+    color: #27C46B;
+}
+table.table td a.edit {
+    color: #FFC107;
+}
+table.table td a.delete {
+    color: #E34724;
+}
+table.table td i {
+    font-size: 19px;
+}
+table.table td a.add i {
+    font-size: 24px;
+    margin-right: -1px;
+    position: relative;
+    top: 3px;
+}    
+table.table .form-control {
+    height: 32px;
+    line-height: 32px;
+    box-shadow: none;
+    border-radius: 2px;
+}
+table.table .form-control.error {
+    border-color: #f50000;
+}
+table.table td .add {
+    display: none;
+}
+  
